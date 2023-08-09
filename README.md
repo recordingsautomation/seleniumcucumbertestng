@@ -1,14 +1,56 @@
-# Selenium-Cucumber-TestNG-Maven
-Uploading automation testing framework built using Selenium-Cucumber-TestNG-Maven
+# Selenium Cucumber Framework
 
+---
 
-About:
-------
-This project repository is for the article published on Medium platform.
+## Project Purpose
+This project aims to give an inspiring or sample of automation test framework that uses Selenium and Cucumber with Java as the programming language.
 
-https://medium.com/@Raghwendra.sonu/web-automation-with-selenium-cucumber-maven-and-testng-using-page-object-model-in-java-f93da15be06e
+You can see pieces of framework components that build on every git branch.
+For example, you want to see how `Hooks` is implemented in the framework.
+Just select the `Hooks` branch then you will see the magic.
 
-In this project repository, we are designing a Web Automation framework with Selenium, Cucumber, Maven, and TestNG using Page Object Model in Java.
+![select branch](https://github.com/yazidisme/image-attachment/blob/master/seleniumcucumberframework1.png)
 
-For details, you can have a look at my above published article. Let me know if this was helpful. If you ever need my help, you can contact me through my LinkedIn Profile.
-https://au.linkedin.com/in/raghwendra-sonu
+If you want to go back to the current branch, you can select `main` as the default branch.
+
+---
+
+## Tools and Libraries
+This project using 2 main tools, Selenium and Cucumber.
+On the other hand, I using some of the tools that support this great framework.
+The complete list of tools, you can see in the `pom.xml` file.
+
+## Requirements
+* Java Development Kit
+* Maven
+* WebDriver, using ChromeDriver
+
+## Running Tests
+* Clone the repository from your fork to this directory
+* Open the project using any Java IDE
+* Run the tests with the script below
+```shell
+$ mvn clean install
+```
+* If you want to run the specific test, use the cucumber tags like this
+```shell
+$ mvn clean install -Dcucumber.filter.tags="@REPLACE_WITH_ANY_TAGS_THAT_YOU_WANT"
+```
+
+## Test Results
+* Test report automatically generated on `target` folder after finished the test execution
+* See test report from `target/cucumber-reports/advanced-reports/cucumber-html-reports/overview-features.html`
+* You can also share your Cucumber Report with another person at https://reports.cucumber.io, just go to `src/test/resources/cucumber.properties` then change the value to be `true`
+```properties
+cucumber.publish.enabled=true
+```
+* For more information about reports cucumber you can go to https://reports.cucumber.io/docs/cucumber-jvm
+
+---
+
+### References
+* https://cucumber.io/docs/installation/java/
+* https://www.selenium.dev/documentation/en/
+* https://www.toolsqa.com/cucumber-automation-framework/
+* https://www.w3schools.com/java/
+* https://www.oracle.com/java/technologies/javase/codeconventions-introduction.html
